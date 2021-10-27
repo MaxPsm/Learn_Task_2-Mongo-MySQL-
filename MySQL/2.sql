@@ -8,3 +8,8 @@ CREATE TABLE `test`.`users` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
+
+CREATE TRIGGER update_user
+BEFORE UPDATE
+ON users FOR EACH ROW
+SET NEW.updated = CURRENT_DATE
