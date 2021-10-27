@@ -1,0 +1,10 @@
+CREATE TABLE `test`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(90) NULL,
+  `pass` VARCHAR(45) NULL,
+  `sum` INT NULL,
+  `updated` DATE DEFAULT 0 NULL,
+  `created` DATE DEFAULT (CURRENT_DATE) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
